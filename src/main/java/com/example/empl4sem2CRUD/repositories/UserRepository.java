@@ -33,4 +33,9 @@ public class UserRepository { // класс работает с базой да�
         jdbc.update(sql, user.getFirstName(), user.getLastName());
         return  user;
     }
+
+    public void delete(int id) {
+        String sql = "DELETE FROM userTable WHERE id=?)";
+        jdbc.update(sql, id);
+     }
 }
