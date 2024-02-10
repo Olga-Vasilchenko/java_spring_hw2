@@ -40,10 +40,9 @@ public class UserController {
         return "redirect:/users";
     }
 
-//    @PostMapping("user-delete/{id}")
-//    public String deleteUser(@PathVariable("id") int id) {
-//        userService.();
-//        return "redirect:/users";
-//    }
-
+    @PostMapping("user-delete/{id}")
+    public String deleteUser(@PathVariable("id") int id) {
+        userService.deleteUser(id);
+        return "redirect:/users";
+    }
 }
